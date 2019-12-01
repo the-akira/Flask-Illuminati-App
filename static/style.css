@@ -44,7 +44,7 @@ body{
 .avatar:hover{
     transform: rotate(180deg);
     transition: all 0.7s ease-in-out 0s;	
-	cursor: url(illu.jpg), auto;
+    cursor: url(illu.jpg), auto;
 }
 
 .post-avatar{
