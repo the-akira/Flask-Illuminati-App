@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="tag-container">
+    <h2 class="title"><em>{{ tag }}</em></h2>
+    <br>
+	    <div class="post-container">
+	    {% with pages=pages  %}
+			{% for page in pages %}
+			        <a class="tag-item" href="{{ url_for('page', path=page.path) }}">{{ page.title }}</a>
+			{% endfor %}
+	    {% endwith %}
+	    </div>
+    </div>
+{% endblock content %}

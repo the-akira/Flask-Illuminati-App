@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="page-container">
+		<hr>
+	    <h2 class="title">{{ page.title }}</h2>
+	    <p class="tag"><strong><i class="fas fa-user fa-2x icone"></i></strong> {{ page.author }}</p>
+	    <p class="tag"><strong><i class="far fa-calendar-alt fa-2x icone"></i></strong> {{ page.date }}</p>
+        {% with pages=pages  %}
+            {% include "_list.html" %}
+        {% endwith %}	    
+	    <hr>
+	    {{ page.html|safe }}
+    </div>
+{% endblock content %}

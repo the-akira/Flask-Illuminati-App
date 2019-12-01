@@ -1,0 +1,8 @@
+<p class="tag">
+	{% if page.meta.tags|length %}
+	    <strong><i class="fas fa-tags fa-2x icone"></i></strong> 
+	    {% for page_tag in page.meta.tags %}
+	        <a class="link" href="{{ url_for('tag', tag=page_tag) }}">{{ page_tag }} </a>|
+	    {% endfor %}
+	{% endif %}
+</p>

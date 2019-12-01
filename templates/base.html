@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="akira">
+    <meta name="description" content="illuminati">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/abb211c046.js"></script>
+    <title>Flask Illuminati App</title>
+</head>
+
+<body>
+    <div class="container">
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>

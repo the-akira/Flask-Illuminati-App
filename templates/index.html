@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="posts-container">
+        <header>
+            <h1 class="main-title">Flask Illuminati App</h1>
+            <img class="avatar" src="https://i.ibb.co/CbJHGTd/illuminati.jpg">
+            <div class="header">
+                <a href="https://github.com/the-akira" target="_blank"><i class="fab fa-github fa-3x social"></i></a>
+                <a href="https://twitter.com/akirascientist" target="_blank"><i class="fab fa-twitter fa-3x social"></i></a>
+                <a href="https://facebook.com/gabrielfelippe" target="_blank"><i class="fab fa-facebook-square fa-3x social"></i></a>
+            </div>
+        </header>
+        {% for post in posts %}
+        <div class="post-container">
+            <img class="post-avatar" src="{{ post.img }}">
+            <a class="post-link" href="{{ url_for('page', path=post.path) }}">{{ post.title }}</a>
+            <p class="post-excerpt">{{ post.excerpt }}</p>
+            <a class="button-read" href="{{ url_for('page', path=post.path) }}"><i class="fas fa-book-open fa-2x"></i></a>
+        </div>
+        {% else %}
+            <li>Zero Posts</li>
+        {% endfor %}
+    </div>
+    <br>
+    {{ pagination.links }}    
+{% endblock content %}
