@@ -1,6 +1,17 @@
 # Flask Illuminati App
 
-A simple Illuminati themed blog made with Flask
+A simple Illuminati themed Blog made with Flask
+
+## Features
+
+- Markdown Support
+- Syntax Highlighting
+- Tables
+- Tags
+- Dates
+- Pagination
+
+You can see an example here: **https://flaskilluminati.herokuapp.com**
 
 ## Installation
 
