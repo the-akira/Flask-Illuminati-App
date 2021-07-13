@@ -44,4 +44,4 @@ def pygments_css():
     return pygments_style_defs('stata-dark'), 200, {'Content-Type': 'text/css'}
 
 if __name__ == "__main__":
-	app.run(port=8080)
+    app.run(port=8080)

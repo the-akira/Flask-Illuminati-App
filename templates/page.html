@@ -1,15 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="page-container">
-		<hr>
-	    <h2 class="title">{{ page.title }}</h2>
-	    <p class="tag"><strong><i class="fas fa-user fa-2x icone"></i></strong> {{ page.author }}</p>
-	    <p class="tag"><strong><i class="far fa-calendar-alt fa-2x icone"></i></strong> {{ page.date }}</p>
-        {% with pages=pages  %}
-            {% include "_list.html" %}
-        {% endwith %}	    
-	    <hr>
-	    {{ page.html|safe }}
-    </div>
+<div class="page-container">
+    <hr>
+    <h2 class="title">{{ page.title }}</h2>
+    <p class="tag"><strong><i class="fas fa-user fa-2x icone"></i></strong> {{ page.author }}</p>
+    <p class="tag"><strong><i class="far fa-calendar-alt fa-2x icone"></i></strong> {{ page.date }}</p>
+    {% with pages=pages %}
+        {% include "_list.html" %}
+    {% endwith %}
+    <hr>
+    {{ page.html|safe }}
+</div>
+<script type="text/javascript">
+    var tag = document.querySelector("a:not(.link):not(.icon):not(.post-link):not(.button-read)");
+    tag.style.padding = "4px";
+    tag.style.border = "none";
+    tag.style.background = "none";
+    tag.style.boxShadow = "none";
+    tag.style.color = "white";
+    tag.style.textDecoration = "underline";
+</script>
 {% endblock content %}
