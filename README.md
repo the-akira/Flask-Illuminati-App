@@ -1,5 +1,7 @@
 # Flask Illuminati App
 
+![img](https://raw.githubusercontent.com/the-akira/Flask-Illuminati-App/master/static/Avatar.png)
+
 A simple Illuminati themed Blog made with Flask
 
 ## Features
